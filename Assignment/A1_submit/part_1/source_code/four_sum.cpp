@@ -11,7 +11,12 @@
 // The program compares a brute force method with an optimized approach
 // and measures their performance for different input sizes.
 // -----------------------------------------------------------------
-
+// To compile the program, use the following command:
+// make
+// 
+// The program is designed to auto load all provided input files and run the test on them.
+// To run the program, use the following command:
+// ./four_sum
 
 //-----------------------------------------------------------------
 // ANALYSIS of PART 1
@@ -398,18 +403,18 @@ void run_test_on_input_files(){
 // -----------------------------------------------------------------
 int main(int argc, char* argv[]) {
 
-	//run_test_on_input_files();
-    if (argc != 4) { // Ensure correct usage
-        cerr << "Usage: " << argv[0] << " <start> <end> <step>" << endl;
-        return 1;
-    }
+	run_test_on_input_files();
+    // if (argc != 4) { // Ensure correct usage
+    //     cerr << "Usage: " << argv[0] << " <start> <end> <step>" << endl;
+    //     return 1;
+    // }
 
-    // Parse command-line arguments
-    int start = stoi(argv[1]);
-    int end = stoi(argv[2]);
-    int step = stoi(argv[3]);
+    // // Parse command-line arguments
+    // int start = stoi(argv[1]);
+    // int end = stoi(argv[2]);
+    // int step = stoi(argv[3]);
 
-    run_tests_parallel(start, end, step); // Run tests with the specified range
+    // run_tests_parallel(start, end, step); // Run tests with the specified range
 
     return 0;
 }
