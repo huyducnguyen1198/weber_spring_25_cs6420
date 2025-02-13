@@ -1,0 +1,24 @@
+
+TY  - JOUR
+T1  - New Bounds on the Complexity of the Shortest Path Problem
+AU  - Fredman, Michael L.
+Y1  - 1976/03/01
+PY  - 1976
+DA  - 1976/03/01
+N1  - doi: 10.1137/0205006
+DO  - 10.1137/0205006
+T2  - SIAM Journal on Computing
+JF  - SIAM Journal on Computing
+JO  - SIAM J. Comput.
+SP  - 83
+EP  - 89
+VL  - 5
+IS  - 1
+PB  - Society for Industrial and Applied Mathematics
+N2  - It is shown that $O(N^{5/2} )$ comparisons and additions suffice to solve the all-pairs shortest path problem for directed graphs on N vertices with nonnegative edge weights. In conjunction with preprocessing, this result is exploited to produce an $o(N^3 )$ algorithm for solving the shortest path problem.
+AB  - It is shown that $O(N^{5/2} )$ comparisons and additions suffice to solve the all-pairs shortest path problem for directed graphs on N vertices with nonnegative edge weights. In conjunction with preprocessing, this result is exploited to produce an $o(N^3 )$ algorithm for solving the shortest path problem.
+SN  - 0097-5397
+M3  - doi: 10.1137/0205006
+UR  - https://doi.org/10.1137/0205006
+Y2  - 2025/02/05
+ER  - 
