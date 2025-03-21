@@ -63,6 +63,7 @@
 		"stack": "cpp",
 		"deque": "cpp",
 		"future": "cpp",
-		"thread": "cpp"
+		"thread": "cpp",
+		"utility": "cpp"
 	}
 }

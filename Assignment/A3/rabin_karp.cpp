@@ -703,23 +703,16 @@ public:
 
 	static std::pair<vector2D, vector2D> example_4() {
 		vector2D T_data = {
-			{2, 0, 5, 6, 2, 5, 2, 3, 0, 1},
-			{2, 5, 5, 2, 3, 5, 3, 2, 6, 0},
-			{5, 3, 5, 6, 3, 1, 5, 6, 2, 4},
-			{1, 0, 2, 1, 6, 3, 0, 0, 3, 6},
-			{4, 0, 2, 5, 2, 1, 0, 3, 3, 5},
-			{2, 4, 0, 2, 1, 3, 5, 3, 1, 3},
-			{3, 6, 1, 5, 1, 5, 6, 5, 0, 0},
-			{1, 4, 0, 6, 1, 2, 4, 1, 3, 4},
-			{2, 3, 1, 4, 0, 1, 1, 4, 1, 0},
-			{4, 5, 0, 1, 2, 1, 2, 1, 3, 0}
+			{2, 0, 5, 6, 2},
+			{2, 5, 5, 2, 3},
+			{5, 3, 5, 6, 3},
+			{1, 0, 2, 1, 6},
+			{4, 0, 2, 5, 2},
 		};
 
 		vector2D P_data = {
-			{3, 5, 3, 1},
-			{5, 6, 5, 0},
-			{2, 4, 1, 3},
-			{1, 1, 4, 1}
+			{5, 2},
+			{5, 6},
 		};
 
 		return std::pair<vector2D, vector2D>(T_data, P_data);
@@ -842,8 +835,6 @@ void part_2_run_on_1000_1000() {
     run_each_random_step(rk, M, d, 1000, 1000, 64, 64, 0);
 }
 int main() {
-	int d = 10; // Number of characters in the alphabet
-
 	// print header
 	std::cout << "======================================" << std::endl;
 	std::cout << "Rabin-Karp 2D Part 1: Preset Matrices" << std::endl;

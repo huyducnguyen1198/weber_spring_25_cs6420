@@ -6,35 +6,38 @@ CXXFLAGS = -Wall -Wextra -O2 -std=c++17
 
 # Target executables
 TARGET = rabin_karp
-KMP_TARGET = kmp
+KMP_TARGET = kmp  # Renamed from 'kmp' to avoid conflicts
 
 # Source files for each target
 SRCS = rabin_karp.cpp
-KMP_SRCS = KMP.cpp
+KMP_SRCS = kmp.cpp
 
 # Object files
-OBJS = $(SRCS:.cpp=.o)
-KMP_OBJS = $(KMP_SRCS:.cpp=.o)
+OBJS = rabin_karp.o
+KMP_OBJS = kmp.o
 
 # Default rule: builds both executables
 all: $(TARGET) $(KMP_TARGET)
 
 # Rule to build only Rabin-Karp
-rk: $(TARGET)  # Now correctly referencing rabin_karp
+rk: $(TARGET)
 
 # Rule to build only KMP
-kmp: $(KMP_TARGET)  # Now correctly referencing kmp
+kmp: $(KMP_TARGET)
 
 # Linking the Rabin-Karp executable
 $(TARGET): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
-# Linking the KMP executable
+# Linking the KMP executable (renamed)
 $(KMP_TARGET): $(KMP_OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
-# Compiling C++ source files
-%.o: %.cpp
+# Explicit compilation rules
+rabin_karp.o: rabin_karp.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+kmp.o: kmp.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 # Clean rule

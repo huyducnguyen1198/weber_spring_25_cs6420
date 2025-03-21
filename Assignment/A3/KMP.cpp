@@ -51,7 +51,7 @@ void KMP(const std::string &text, const std::string &pattern) {
 }
 
 int main(int argc, char const *argv[]){
-	std::string pattern = "1101";
+	std::string pattern = "";
 
 	// get pattern from argv
 	if (argc == 2) {
